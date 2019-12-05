@@ -1,8 +1,9 @@
 <template>
-   <div class="hello">
+   <div>
       <div class="row">
-         <p class="col">Componenet moo</p>
-         <button class="m-2 col btn btn-primary" @click="modifyValue">Send</button>
+         <p class="col">Componenet child: moo</p>
+         <button class="m-2 col btn btn-primary"
+                 @click="modifyValueInMoo()">Send</button>
       </div>
       <h3 class="text-center">{{ message }}</h3>
    </div>
@@ -14,9 +15,9 @@
             message: String
         },
         methods: {
-            modifyValue: function () {
+            modifyValueInMoo: function () {
                 this.message = "Modified by moo";
-                this.$emit('dataIsChanged', this.message)
+                this.$emit('dataIsChangedInMoo', this.message)
             }
         }
     }
