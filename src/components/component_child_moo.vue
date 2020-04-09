@@ -5,19 +5,19 @@
          <button class="m-2 col btn btn-primary"
                  @click="modifyValueInMoo()">Send</button>
       </div>
-      <h3 class="text-center">{{ message }}</h3>
+      <h3 class="text-center">{{ anotherRandomVariableName }}</h3>
    </div>
 </template>
 
 <script>
     export default {
         props: {
-            message: String
+           anotherRandomVariableName: String
         },
         methods: {
             modifyValueInMoo: function () {
-                this.message = "Modified by moo";
-                this.$emit('dataIsChangedInMoo', this.message)
+                this.anotherRandomVariableName = "Modified by moo";
+                this.$emit('dataIsChangedInMoo', this.anotherRandomVariableName)
             }
         }
     }

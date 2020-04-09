@@ -12,10 +12,10 @@
          </div>
          <div class="p-5 row">
             <component_foo class="bg-warning text-dark m-2 p-3 col"
-                           :message="message"
+                           :randomVariableName="message"
                            @dataIsChangedInFoo="message = $event"/>
             <component_moo class="bg-success m-2 p-3 col"
-                           :message="message"
+                           :anotherRandomVariableName="message"
                            @dataIsChangedInMoo="message = $event"></component_moo>
          </div>
          <div class="p-5">
